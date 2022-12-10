@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>a31cd95d-807c-43df-9224-97608e9cf9f5</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.10" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="6.0.2" />
+    <PackageReference Include="Volo.Abp.Data" Version="6.0.2" />
+  </ItemGroup>
+
+</Project>

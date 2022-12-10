@@ -1,0 +1,53 @@
+﻿@model IEnumerable<dotNetExercise.Models.Vehicle>
+
+@{
+    ViewData["Title"] = "Vehicles";
+}
+
+<h1>Vehicles</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-success">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Brand)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Model)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vehiclescol)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Owner)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Brand)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Model)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Vehiclescol)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Owner.Id)
+            </td>
+            <td>
+                    <a asp-action="Edit" class="btn btn-warning" asp-route-id="@item.IdVehicles">Edit</a> |
+                    <a asp-action="Details" class="btn btn-light" asp-route-id="@item.IdVehicles">Details</a> |
+                    <a asp-action="Delete" class="btn btn-dark" asp-route-id="@item.IdVehicles">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
